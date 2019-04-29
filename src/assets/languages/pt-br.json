@@ -1,0 +1,16 @@
+{
+    "SELECTLANGUAGE": "Selecione a língua",
+    "SELECTPTBR": "pt-br",
+    "SELECTEN": "en",
+    "WELCOME": "Bem Vindo!",
+    "SELECT": "Change language",
+    "VALID": "Validação passou",
+    "FORGETPASSWORD": "Esqueceu sua senha?",
+    "INPUTEMAIL": "Informe o e-mail",
+    "INPUTPASSWORD": "Informe a senha",
+    "INVALIDEMAIL": "O e-mail é obrigatório",
+    "INVALIDEMAILTYPE": "O e-mail informado não está em um formato correto",
+    "INVALIDPASSWORD": "A senha é obrigatória",
+    "INVALIDPASSWORDLENGTH": "A senha deve conter no minímo 5 caracteres",
+    "PAGENOTFOUND": "Opa! Página não encontrada"
+}

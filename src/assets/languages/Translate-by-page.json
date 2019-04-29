@@ -1,0 +1,10 @@
+{
+    "HOME": {
+        "WELCOME": "Welcome Customer",
+        "SELECT": "Change language"
+    },
+    "PAGE-2": {
+        "WELCOME": "Welcome Customer to Page 2",
+        "SELECT": "Change language"
+    }
+}

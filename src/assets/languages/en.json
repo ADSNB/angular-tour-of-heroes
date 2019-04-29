@@ -1,0 +1,16 @@
+{
+    "SELECTLANGUAGE": "Select language",
+    "SELECTPTBR": "pt-br",
+    "SELECTEN": "en",
+    "WELCOME": "Welcome Customer",
+    "SELECT": "Change language",
+    "ISVALID": "Validation passed",
+    "FORGETPASSWORD": "Forget your password?",
+    "INPUTEMAIL": "Type your e-mail",
+    "INPUTPASSWORD": "Type your password",
+    "INVALIDEMAIL": "E-mail is required",
+    "INVALIDEMAILTYPE": "The e-mail is not a valid type",
+    "INVALIDPASSWORD": "Password is required",
+    "INVALIDPASSWORDLENGTH" : "The password must contain at least 5 characters",
+    "PAGENOTFOUND": "Sorry! Page not found"
+}

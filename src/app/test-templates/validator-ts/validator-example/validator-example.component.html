@@ -1,0 +1,53 @@
+<body class="text-center">
+  <form class="form-signin">
+
+    <img class="mb-4" src="assets/images/totvs-label.png" alt="" width="72" height="72">
+    <h1 class="h3 mb-3 font-weight-normal">Exemplo de Validator.TS</h1>
+    
+    <div class="form-group">
+      <label for="inputEmail" class="sr-only">Endereço de e-mail</label>
+      <input 
+        [(ngModel)]="login.email"
+        name="email"
+        id="email"
+        class="form-control"
+        placeholder="Endereço de e-mail"
+        autofocus
+      >
+    </div>
+
+    <label for="inputPassword" class="sr-only">Senha</label>
+    <input 
+      [(ngModel)]="login.password"
+      name="password" 
+      id="password" 
+      class="form-control" 
+      placeholder="Senha"
+    >
+    
+    <div class="checkbox mb-3">
+      <label>
+        <input type="checkbox" value="remember-me"> Lembrar-me
+      </label>
+    </div>
+
+    <button 
+      class="btn btn-lg btn-primary btn-block" 
+      (click)="ConfirmClick()"
+    >
+      Login
+    </button>
+
+    <div><span>login input: </span>{{login.email}}</div>
+    <div><span>password input: </span>{{login.password}}</div>
+
+<!--
+    <div class="alert alert-danger"
+     *ngIf="inputEmail.invalid && (inputEmail.dirty || inputEmail.touched)"
+    >
+    </div>
+-->
+    <p class="mt-5 mb-3 text-muted">&copy; Todos direitos reservados 2018</p>
+    
+  </form>
+</body>

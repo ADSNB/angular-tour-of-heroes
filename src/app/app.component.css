@@ -1,0 +1,14 @@
+.example-container {    
+    height: 98%;
+}
+
+.example-sidenav-content {
+    display: block;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.example-sidenav {
+    padding: 50px;
+}

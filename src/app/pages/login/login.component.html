@@ -1,0 +1,57 @@
+<body class="text-center">
+  <form class="form-signin" (ngSubmit)="ConfirmClick()" #heroForm="ngForm">
+
+    <img class="mb-4" src="assets/images/totvs-label.png" alt="Totvs logo" width="72" height="72">
+    <h1 class="h3 mb-3 font-weight-normal">{{ 'WELCOME' | translate }}</h1>
+    
+    <p>
+      <mat-form-field appearance="outline" hintLabel="*Campo obrigatório">
+        <mat-label>E-mail</mat-label>
+        <input #loginControl matInput placeholder="{{ 'INPUTEMAIL' | translate}}" [(ngModel)]="login.email" name="login" autofocus required>
+        <!--<mat-icon matSuffix>sentiment_very_satisfied</mat-icon>-->
+        <mat-hint align="end">{{loginControl.value?.length || 0}}</mat-hint>
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field appearance="outline">
+        <mat-label>Senha</mat-label>
+        <input #passwordControl matInput placeholder="{{ 'INPUTPASSWORD' | translate }}" [(ngModel)]="login.password" name="password" required>
+        <!--<mat-icon matSuffix>sentiment_very_satisfied</mat-icon>-->
+        <mat-hint align="end">{{passwordControl.value?.length || 0}}/10</mat-hint>
+      </mat-form-field>
+    </p>
+    <p>
+    <mat-checkbox>Lembrar-me!</mat-checkbox>
+    <br>
+    <br>
+    <button mat-flat-button mat-button type="submit" [disabled]="!heroForm.form.valid" >Login</button>
+    <nav>
+      <a routerLink="/Page-Not-Found" routerLinkActive="active">{{ 'FORGETPASSWORD' | translate }}</a>
+      <br>
+      <a routerLink="/Page-Not-Found" routerLinkActive="active">Home Page</a>
+      <br>
+      <a routerLink="/Page-Not-Found" routerLinkActive="active">Page Not Found</a>
+      <!-- POPUP Não funcionando
+        <br>
+        <a [routerLink]="[{ outlets: { popup: ['compose'] } }]">Not Working</a>-->
+    </nav>
+
+    <!-- Testes de Dados -->
+    
+    <div><span>Dados pela model</span></div>
+    <div><span>login Model: </span>{{ login.email }}</div>
+    <div><span>password Model: </span>{{ login.password }}</div>
+    <br>
+    <div><span>Dados pelos controles</span></div>
+    <div><span>login Input: </span>{{ loginControl.value }}</div>
+    <div><span>password Input: </span>{{ passwordControl.value }}</div>
+    <br>
+    <div><span>Dado pelo form</span></div>
+    <div><span>login form Input: </span>{{ heroForm  }}</div>
+    <div><span>password form Input: </span>{{ heroForm.form | json }}</div>
+    
+
+    <p class="mt-5 mb-3 text-muted">&copy; Todos direitos reservados 2018</p>
+    
+  </form>
+</body>

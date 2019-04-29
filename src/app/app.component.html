@@ -1,0 +1,86 @@
+<ng-http-loader 
+  backgroundColor="#0087ff" 
+  spinner="sk-wave"
+  debounceDelay="100"
+  minDuration="000">
+</ng-http-loader>
+
+<mat-toolbar style="height: 35px;" color="primary">
+    <span>TOTVER</span>
+
+    <span class="example-fill-remaining-space"></span>
+    <button type="button" mat-button (click)="MenuLeft.toggle()">
+      Toggle left sidenav
+    </button>
+    <button type="button" mat-button (click)="MenuRight.toggle()">
+      Toggle right sidenav
+    </button>
+    <span class="example-fill-remaining-space"></span>
+    
+    <span style="padding-left: 10px; padding-right: 10px; height: 25px;">
+      <a (click)="demoSync()" href="#">
+        <img style="vertical-align: inherit;" src="../../assets/images/brasil_redondo.png" width="25px" height="25px">
+      </a>
+    </span>
+    <span style="padding-left: 10px; padding-right: 10px; height: 25px;">
+      <a (click)="changeLanguage('SELECTPTBR')" href="#">
+        <img style="vertical-align: inherit;" src="../../assets/images/brasil_redondo.png" width="25px" height="25px">
+      </a>
+    </span>
+    <span style="padding-right: 5px; height: 25px;">
+      <a (click)="changeLanguage('SELECTEN')" href="#">
+        <img style="vertical-align: inherit;" src="../../assets/images/eua_redondo.png" width="25px" height="25px">
+      </a>
+    </span>
+  </mat-toolbar>
+
+<mat-divider></mat-divider>
+
+<mat-drawer-container class="example-container" [hasBackdrop]="false" autosize>
+  <mat-drawer #MenuLeft class="example-sidenav" mode="push" opened="false" position="start">
+    <p>Auto-resizing sidenav</p>
+    <p *ngIf="showFiller">Lorem, ipsum dolor sit amet consectetur.</p>
+    <button (click)="showFiller = !showFiller" mat-raised-button>
+      Toggle extra text
+    </button>
+  </mat-drawer>
+
+  <mat-drawer #MenuRight class="example-sidenav" mode="push" opened="false" position="end">
+    <p>Menu content</p>
+  </mat-drawer>
+
+  <div class="example-sidenav-content">
+    <router-outlet></router-outlet>    
+  </div>
+
+</mat-drawer-container>
+
+<!--
+<router-outlet></router-outlet>
+<app-login></app-login>
+<app-page-not-found></app-page-not-found>
+<app-popup-example></app-popup-example>>
+<app-validator-example></app-validator-example>  
+-->
+
+<!-- Menu lateral
+
+  <div 
+    style="width:50px;
+    height:100%;
+    color:#CC0000;
+    text-align:center;
+    top:0;
+    position: absolute; 
+    left:0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 5px;
+    padding-left: 5px;">
+      <button  mat-button type="button" (click)="MenuLeft.toggle()">
+        <img style="vertical-align: inherit;" src="../assets/images/home.jpg" width="50px" height="50px">
+      </button>
+    </div>
+
+-->
